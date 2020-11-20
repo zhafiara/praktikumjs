@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Kurs Mata Uang</title>
+	
+	<style>
+		body {
+			background-color: #EEE8AA;
+			margin: 100px;
+        }
+		table {
+			border: 2px;
+			border-style: solid;
+			margin: 0;
+			padding: 0;
+		}
+		h1 {
+			text-align: center;
+			margin: 0;
+			padding: 0;
+		}
+	</style>
+</head>
+<body>
+	<h1>Kurs Rupiah Mata Uang Asing</h1>
+	<br>
+		<center>
+		<table>
+		  <tr>
+			<th>Masukkan Nilai</th>
+			<th>Values</th>
+			<th>Nilai Rupiah</th>
+		  </tr>
+		  <tr>
+			<td>
+			  <input type="text" id="nilai" value="0" onchange="hitung()" />
+			</td>
+			<td>
+			  <select id="values" onchange="hitung()">
+				<option value="Ubah">Ubah Kurs</option>
+				<option value="dollar">Dollar US</option>
+				<option value="dollarsing">Dollar Singapore</option>
+				<option value="ringgit">Ringgit Malaysia</option>
+				<option value="yen">Yen Jepang</option>
+				<option value="euro">Euro</option>
+				<option value="riyal">Riyal Arab Saudi</option>
+			  </select>
+			</td>
+			<td><input type="text" id="rupiah" value="0" /></td>
+		  </tr>
+		</table>
+		</center>
+	
+	  <script>
+		function hitung() {
+		  let n1 = Number(document.getElementById("nilai").value);
+		  let val = document.getElementById("values").value;
+  
+		  if (val === "dollar") {
+			document.getElementById("rupiah").value = n1 * 9915;
+		  } else if (val === "dollarsing") {
+			document.getElementById("rupiah").value = n1 * 13472;
+		  } else if (val === "ringgit") {
+			document.getElementById("rupiah").value = n1 * 874;
+		  } else if (val === "yen") {
+			document.getElementById("rupiah").value = n1 * 120;
+		  } else if (val === "euro") {
+			document.getElementById("rupiah").value = n1 * 15888;
+		  } else if (val === "riyal") {
+			document.getElementById("rupiah").value = n1 * 3592;
+		  }
+		}
+	  </script>
+</body>
+</html>

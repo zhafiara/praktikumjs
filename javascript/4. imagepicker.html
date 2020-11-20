@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Picker</title>
+
+    <style>
+        body {
+            margin: 100px;
+            padding: 0%;
+			text-align: center;
+		}
+    </style>
+</head>
+<body>
+		<select onchange="gantigambar();" id="listgambar">
+			<option value="https://images.wallpaperscraft.com/image/fruit_stand_vase_variety_15276_1280x720.jpg">MAU BUAH APA?</option>
+			<option value="https://images.wallpaperscraft.com/image/raspberries_berries_baskets_flowers_95239_1280x720.jpg">RASPBERRYS</option>
+			<option value="https://images.wallpaperscraft.com/image/strawberries_berries_ripe_123009_1280x720.jpg">STRAWBERRYS</option>
+			<option value="https://images.wallpaperscraft.com/image/orange_citrus_fruit_184594_1280x720.jpg">ORANGE</option>
+			<option value="https://images.wallpaperscraft.com/image/fruit_citrus_pineapple_121783_1280x720.jpg">PINEAPPLE</option>
+			<option value="https://images.wallpaperscraft.com/image/apples_branch_ripe_89729_1280x720.jpg">APPLE</option>
+			<option value="https://images.wallpaperscraft.com/image/cherry_berries_plate_115665_1280x720.jpg">CHERRY</option>
+		</select>
+	<img src="https://images.wallpaperscraft.com/image/fruit_stand_vase_variety_15276_1280x720.jpg" style="width: 100%" id="gambar">
+
+</body>
+	<script>
+	function gantigambar() {
+		let gambar = document.getElementById("listgambar").value;
+		document.getElementById("gambar").src = gambar;
+		alert("Ini Gambar " + gambar);
+	}
+	</script>
+</html>

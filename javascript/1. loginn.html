@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+
+    <style>
+        body {
+            background-color: #D3D3D3;
+            margin: 100px;
+        }
+        h1 {
+			margin: auto;
+			padding: 0%;
+			text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Informasi Login</h1>
+    <br>
+	<center>
+		<form method="REQUEST">
+			Username :<br/>
+			<input type="text" placeholder="username" id="username" name="username"><br/>
+			<br>
+			Password :<br/>
+			<input type="password"  placeholder="password" id="password" name="password"><br/>
+			<br>
+			<button type="submit" onclick="return login()">SUBMIT</button>
+		</form>
+	</center>
+
+</body>
+<script>
+	function login() {
+		username = document.getElementById("username").value;
+		password = document.getElementById("password").value;
+
+		if (username == "" || password == "") {
+			alert("Username / Password Tidak Boleh Kosong");
+			return false;
+		}
+		else if (password.length < 8) {
+			alert("Password Kurang Dari 8");
+			return false;
+		}
+		else if (username == "japi" && password == "08953653") {
+			window.location = "chat.html";
+			return false;
+		}else{
+			alert("Username / Password Salah");
+		}
+	}
+</script>
+</html>
